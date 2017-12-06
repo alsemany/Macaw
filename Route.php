@@ -37,7 +37,7 @@ class Route {
   /**
    * Defines callback if route is not found
   */
-  public static function error($callback) {
+  public static function catchall($callback) {
     self::$error_callback = $callback;
   }
 

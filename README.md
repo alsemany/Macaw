@@ -62,8 +62,8 @@ Route::dispatch();
 Lastly, if there is no route defined for a certain location, you can make Route run a custom callback, like:
 
 ```PHP
-Route::error(function() {
-  echo '404 :: Not Found';
+Route::catchall(function() {
+  echo 'Catching All 404 Errors :: Not Found';
 });
 ```
 
