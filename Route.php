@@ -159,6 +159,8 @@ class Route {
         }
       }
       call_user_func(self::$error_callback);
+    } else {
+      header($_SERVER['SERVER_PROTOCOL']." 200");
     }
   }
 }
