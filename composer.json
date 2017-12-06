@@ -1,5 +1,5 @@
 {
-	"name": "noahbuscher/macaw",
+	"name": "alsemany/route",
 	"description": "Simple PHP router class.",
 	"license": "MIT",
 	"homepage": "https://github.com/noahbuscher/Macaw",
@@ -10,9 +10,9 @@
 	],
 	"authors": [
 		{
-			"name": "Noah Buscher",
-			"email": "me@noahbuscher.com",
-			"homepage": "http://noahbuscher.com/"
+			"name": "'Mohamed Alsemany'",
+			"email": "m.alsemany@gmail.com",
+			"homepage": "http://superhulk.com/"
 		}
 	],
 	"require": {
@@ -23,6 +23,6 @@
 		"guzzle/guzzle": "~3.9"
 	},
 	"autoload": {
-		"psr-4": { "NoahBuscher\\Macaw\\": "./" }
+		"psr-4": { "Alsemany\\Route\\": "./" }
 	}
 }
