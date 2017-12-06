@@ -2,7 +2,7 @@
 	"name": "alsemany/route",
 	"description": "Simple PHP router class.",
 	"license": "MIT",
-	"homepage": "https://github.com/noahbuscher/Macaw",
+	"homepage": "https://github.com/alsemany/route",
 	"keywords": [
 		"router",
 		"php-router",
