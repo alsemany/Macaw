@@ -132,7 +132,7 @@ composer.json:
 ```
 {
    "require": {
-        "alsemany/Route": "master"
+        "alsemany/Route": "^0.1.0"
     },
     "autoload": {
         "psr-4": {
