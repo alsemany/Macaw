@@ -38,6 +38,7 @@ class Route {
    * Defines callback if route is not found
   */
   public static function catchall($callback) {
+    header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
     self::$error_callback = $callback;
   }
 
