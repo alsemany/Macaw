@@ -5,13 +5,18 @@ Route is a simple, open source PHP router. It's super small (~150 LOC), fast, an
 
 ### Install
 
-If you have Composer, just include Route as a project dependency in your `composer.json`. If you don't just install it by downloading the .ZIP file and extracting it to your project directory.
+#### Composer
+
+If you have Composer
 
 ```
-require: {
-    "alsemany/Route": "master"
-}
+# composer require alsemany/route
 ```
+
+#### Download From Releases
+https://github.com/alsemany/route/releases
+Download Zip file or tar.gz
+
 
 ### Examples
 
