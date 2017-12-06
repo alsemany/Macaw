@@ -1,16 +1,16 @@
 <?php
 
-namespace NoahBuscher\Macaw;
+namespace Alsemany\Route;
 
 /**
- * @method static Macaw get(string $route, Callable $callback)
- * @method static Macaw post(string $route, Callable $callback)
- * @method static Macaw put(string $route, Callable $callback)
- * @method static Macaw delete(string $route, Callable $callback)
- * @method static Macaw options(string $route, Callable $callback)
- * @method static Macaw head(string $route, Callable $callback)
+ * @method static Route get(string $route, Callable $callback)
+ * @method static Route post(string $route, Callable $callback)
+ * @method static Route put(string $route, Callable $callback)
+ * @method static Route delete(string $route, Callable $callback)
+ * @method static Route options(string $route, Callable $callback)
+ * @method static Route head(string $route, Callable $callback)
  */
-class Macaw {
+class Route {
   public static $halts = false;
   public static $routes = array();
   public static $methods = array();
