@@ -1,77 +1,77 @@
-Macaw
+Route
 =====
 
-Macaw is a simple, open source PHP router. It's super small (~150 LOC), fast, and has some great annotated source code. This class allows you to just throw it into your project and start using it immediately.
+Route is a simple, open source PHP router. It's super small (~150 LOC), fast, and has some great annotated source code. This class allows you to just throw it into your project and start using it immediately.
 
 ### Install
 
-If you have Composer, just include Macaw as a project dependency in your `composer.json`. If you don't just install it by downloading the .ZIP file and extracting it to your project directory.
+If you have Composer, just include Route as a project dependency in your `composer.json`. If you don't just install it by downloading the .ZIP file and extracting it to your project directory.
 
 ```
 require: {
-    "noahbuscher/macaw": "dev-master"
+    "alsemany/Route": "master"
 }
 ```
 
 ### Examples
 
-First, `use` the Macaw namespace:
+First, `use` the Route namespace:
 
 ```PHP
-use \NoahBuscher\Macaw\Macaw;
+use \Alsemany\Route\Route;
 ```
 
-Macaw is not an object, so you can just make direct operations to the class. Here's the Hello World:
+Route is not an object, so you can just make direct operations to the class. Here's the Hello World:
 
 ```PHP
-Macaw::get('/', function() {
+Route::get('/', function() {
   echo 'Hello world!';
 });
 
-Macaw::dispatch();
+Route::dispatch();
 ```
 
-Macaw also supports lambda URIs, such as:
+Route also supports lambda URIs, such as:
 
 ```PHP
-Macaw::get('/(:any)', function($slug) {
+Route::get('/(:any)', function($slug) {
   echo 'The slug is: ' . $slug;
 });
 
-Macaw::dispatch();
+Route::dispatch();
 ```
 
-You can also make requests for HTTP methods in Macaw, so you could also do:
+You can also make requests for HTTP methods in Route, so you could also do:
 
 ```PHP
-Macaw::get('/', function() {
+Route::get('/', function() {
   echo 'I'm a GET request!';
 });
 
-Macaw::post('/', function() {
+Route::post('/', function() {
   echo 'I'm a POST request!';
 });
 
-Macaw::any('/', function() {
+Route::any('/', function() {
   echo 'I can be both a GET and a POST request!';
 });
 
-Macaw::dispatch();
+Route::dispatch();
 ```
 
-Lastly, if there is no route defined for a certain location, you can make Macaw run a custom callback, like:
+Lastly, if there is no route defined for a certain location, you can make Route run a custom callback, like:
 
 ```PHP
-Macaw::error(function() {
+Route::error(function() {
   echo '404 :: Not Found';
 });
 ```
 
-If you don't specify an error callback, Macaw will just echo `404`.
+If you don't specify an error callback, Route will just echo `404`.
 
 <hr>
 
-In order to let the server know the URI does not point to a real file, you may need to use one of the example [configuration files](https://github.com/noahbuscher/Macaw/blob/master/config).
+In order to let the server know the URI does not point to a real file, you may need to use one of the example [configuration files](https://github.com/alsemany/Route/blob/master/config).
 
 
 ## Example passing to a controller instead of a closure
@@ -85,13 +85,13 @@ index.php:
 ```php
 require('vendor/autoload.php');
 
-use NoahBuscher\Macaw\Macaw;
+use Alsemany\Route\Route;
 
-Macaw::get('/', 'Controllers\demo@index');
-Macaw::get('page', 'Controllers\demo@page');
-Macaw::get('view/(:num)', 'Controllers\demo@view');
+Route::get('/', 'Controllers\demo@index');
+Route::get('page', 'Controllers\demo@page');
+Route::get('view/(:num)', 'Controllers\demo@view');
 
-Macaw::dispatch();
+Route::dispatch();
 ```
 
 demo.php:
@@ -120,14 +120,14 @@ class Demo {
 }
 ```
 
-This is with Macaw installed via composer.
+This is with Route installed via composer.
 
 composer.json:
 
 ```
 {
    "require": {
-        "noahbuscher/macaw": "dev-master"
+        "alsemany/Route": "master"
     },
     "autoload": {
         "psr-4": {
